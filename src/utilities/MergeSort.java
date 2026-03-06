@@ -27,7 +27,7 @@ public class MergeSort {
     //sorting
 	public static void sort(Shape[] arr, Comparator<Shape> comp) {
 	    if (comp == null) {
-	        comp = (a, b) -> a.compareTo(b);
+	        comp = (a, b) -> b.compareTo(a);
 	    }
 
 	    if (arr.length <= 1) return;

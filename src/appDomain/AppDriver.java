@@ -6,6 +6,7 @@ import java.util.Scanner;
 import shapes.*; 
 import utilities.*;
 
+
 public class AppDriver {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -58,6 +59,7 @@ public class AppDriver {
             case "i": InsertionSort.insertionSort(myShapes, comp); break;
             case "m": MergeSort.sort(myShapes, comp); break;
             case "q": QuickSort.quickSort(myShapes, comp); break;
+            case "z": ShellSort.shellSort(myShapes, comp); break;
             default: System.out.println("Invalid sort algorithm"); return;
         }
 

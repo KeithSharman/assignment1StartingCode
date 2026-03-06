@@ -45,6 +45,6 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public String toString()
 	{
-		return this.getClass().getName() + " Height: " + height;
+		return this.getClass().getName() + " Height: " + height + " Area: " + this.calcBaseArea() + " Volume: " + this.calcVolume();
 	}
 }
