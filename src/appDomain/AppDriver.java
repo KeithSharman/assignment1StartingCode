@@ -56,7 +56,7 @@ public class AppDriver {
             case "b": BubbleSort.bubbleSort(myShapes, comp); break;
             case "s": SelectionSort.selectionSort(myShapes, comp); break;
             case "i": InsertionSort.insertionSort(myShapes, comp); break;
-            case "m": MergeSort.mergeSort(myShapes, comp); break;
+            case "m": MergeSort.sort(myShapes, comp); break;
             case "q": QuickSort.quickSort(myShapes, comp); break;
             default: System.out.println("Invalid sort algorithm"); return;
         }
