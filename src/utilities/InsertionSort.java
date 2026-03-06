@@ -27,7 +27,7 @@ public class InsertionSort {
 
                 if(comparator != null)
                 {
-                    cmp = comparator.compare(array[j], temp);
+                    cmp = comparator.compare(temp, array[j]);
                 }
                 else
                 {
