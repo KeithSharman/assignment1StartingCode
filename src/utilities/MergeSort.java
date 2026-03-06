@@ -25,10 +25,14 @@ public class MergeSort {
 	}
     
     //sorting
-    public static void sort(Shape[] arr, Comparator<Shape> comp) {
-        if (arr.length <= 1) return;
+	public static void sort(Shape[] arr, Comparator<Shape> comp) {
+	    if (comp == null) {
+	        comp = (a, b) -> b.compareTo(a);
+	    }
 
-        int mid = arr.length / 2;
+	    if (arr.length <= 1) return;
+
+	    int mid = arr.length / 2;
 
         Shape[] left = new Shape[mid];
         Shape[] right = new Shape[arr.length - mid];

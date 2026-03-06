@@ -21,7 +21,7 @@ public class SelectionSort {
                 if (comparator != null) {
                     cmp = comparator.compare(array[j], array[bestIdx]);
                 } else {
-                    cmp = array[j].compareTo(array[bestIdx]);
+                	cmp = array[bestIdx].compareTo(array[j]);
                 }
 
                 

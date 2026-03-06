@@ -13,6 +13,9 @@ public abstract class Shape implements Comparable<Shape>
 	{
 		return height;
 	}
+	public abstract double getBaseArea();
+	public abstract double getVolume();
+	
 
 	// compare shape by height. pls dot touch
 	@Override
@@ -42,6 +45,6 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public String toString()
 	{
-		return this.getClass().getName() + " Height: " + height;
+		return this.getClass().getName() + " Height: " + height + " Area: " + this.calcBaseArea() + " Volume: " + this.calcVolume();
 	}
 }
