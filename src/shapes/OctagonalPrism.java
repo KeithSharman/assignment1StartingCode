@@ -1,22 +1,13 @@
 package shapes;
 
-public class OctagonalPrism extends Shape
+public class OctagonalPrism extends Prism
 {
 	private double edgeLength;
 
 	public OctagonalPrism(double h, double edge)
 	{
-		super(h);
+		super(h, edge);
 		edgeLength = edge;
-	}
-
-	@Override
-	public double calcVolume()
-	{
-		double base = calcBaseArea();
-		double volume = base * height;
-
-		return volume;
 	}
 
 	@Override
@@ -27,5 +18,17 @@ public class OctagonalPrism extends Shape
 		double area = 2.0 * (1.0 + Math.sqrt(2)) * s2;
 
 		return area;
+	}
+
+	@Override
+	public double getBaseArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getVolume() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
