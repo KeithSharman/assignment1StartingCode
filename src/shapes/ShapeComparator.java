@@ -9,12 +9,14 @@ import java.util.Comparator;
 
 public class ShapeComparator {
 	
+	//changed this bc it forced a descending order. needs to be sthe sorting algorithm that does it
+	
 	
     public static Comparator<Shape> byArea() {
-        return (a, b) -> Double.compare(b.calcBaseArea(), a.calcBaseArea());
+        return (a, b) -> Double.compare(a.calcBaseArea(), b.calcBaseArea());
     }
 
     public static Comparator<Shape> byVolume() {
-        return (a, b) -> Double.compare(b.calcVolume(), a.calcVolume());
+        return (a, b) -> Double.compare(a.calcVolume(), b.calcVolume());
     }
 }

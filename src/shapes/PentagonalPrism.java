@@ -1,23 +1,16 @@
 package shapes;
 
-public class PentagonalPrism extends Shape
+public class PentagonalPrism extends Prism
 {
 	private double edgeLength;
 
 	public PentagonalPrism(double h, double edge)
 	{
-		super(h);
+		super(h, edge);
 		edgeLength = edge;
 	}
 
-	@Override
-	public double calcVolume()
-	{
-		double base = calcBaseArea();
-		double volume = base * height;
-
-		return volume;
-	}
+	
 
 	@Override
 	public double calcBaseArea()

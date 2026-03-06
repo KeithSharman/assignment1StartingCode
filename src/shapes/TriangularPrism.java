@@ -1,23 +1,15 @@
 package shapes;
 
-public class TriangularPrism extends Shape
+public class TriangularPrism extends Prism
 {
 	private double edgeLength;
 
 	public TriangularPrism(double h, double edge)
 	{
-		super(h);
+		super(h, edge);
 		edgeLength = edge;
 	}
 
-	@Override
-	public double calcVolume()
-	{
-		double base = calcBaseArea();
-		double volume = base * height;
-
-		return volume;
-	}
 
 	@Override
 	public double calcBaseArea()
