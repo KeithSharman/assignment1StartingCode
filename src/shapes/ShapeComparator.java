@@ -9,7 +9,9 @@ import java.util.Comparator;
 
 public class ShapeComparator {
 	
-	//changed this bc it forced a descending order. needs to be sthe sorting algorithm that does it
+	// I changed this slightly bc it forced a descending order. Assignment says it needs to be sthe sorting algorithm that does it
+	// rather than the comparator.
+	// Minor change but idk if she'll take marks off if left the way it was. 
 	
 	
     public static Comparator<Shape> byArea() {
