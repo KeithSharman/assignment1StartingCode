@@ -1,23 +1,35 @@
 package shapes;
 
-public class Cone {
-	
-	double height;
-	double radius;
-	
-	public Cone(double height, double radius) {
-		
-		this.height = height;
-		this.radius = radius;
+public class Cone extends Shape
+{
+	private double radius;
+
+	public Cone(double h, double r)
+	{
+		super(h);
+		radius = r;
 	}
-	
-	@Override
-	public double calcVolume() {
-		return (1 / 3) * Math.PI * (radius * radius) * height;
+
+	public double getRadius()
+	{
+		return radius;
 	}
-	
+
 	@Override
-	public double calcBaseArea() {
-		return Math.PI * (radius * radius);
+	public double calcVolume()
+	{
+		// volume = (1/3) * pi * r^2 * h
+		// changed this to match formula sheet
+		double base = Math.PI * radius * radius;
+		double volume = (base * height) / 3.0;  // corrected calculation
+
+		return volume;
+	}
+
+	@Override
+	public double calcBaseArea()
+	{
+		double area = Math.PI * radius * radius;
+		return area;
 	}
 }

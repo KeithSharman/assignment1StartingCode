@@ -1,24 +1,29 @@
 package shapes;
 
-public class Pyramid {
-	
-	double height;
-	double side;
-	
-	public Pyramid(double height, double side) {
-		
-		this.height = height;
-		this.side = side;
+public class Pyramid extends Shape
+{
+	private double edgeLength;
+
+	public Pyramid(double h, double edge)
+	{
+		super(h);
+		edgeLength = edge;
 	}
-	
+
 	@Override
-	public double calcVolume() {
-		return (1 / 3) * (side * side) * height;
+	public double calcVolume()
+	{
+		// volume = (1/3) * base * height - from formula sheet
+		double base = edgeLength * edgeLength;
+		double volume = (base * height) / 3.0; //corrected this one too.
+
+		return volume;
 	}
-	
+
 	@Override
-	public double calcBaseArea() {
-		
-		return side * side;
+	public double calcBaseArea()
+	{
+		double area = edgeLength * edgeLength;
+		return area;
 	}
 }

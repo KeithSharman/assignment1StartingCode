@@ -1,25 +1,34 @@
 package shapes;
 
-public class Cylinder {
-	
-	double height;
-	double radius;
-	
-	public Cylinder(double height, double radius) {
-		
-		this.height = height;
-		this.radius = radius;
+public class Cylinder extends Shape
+{
+	private double radius;
+
+	public Cylinder(double h, double r)
+	{
+		super(h);
+		radius = r;
 	}
-	
-	@Override
-	public double calcVolume() {
-		
-		return Math.PI * (radius * radius) * height;
+
+	public double getRadius()
+	{
+		return radius;
 	}
-	
+
 	@Override
-	public double calcBaseArea() {
-		
-		return Math.PI * (radius * radius);
+	public double calcVolume()
+	{
+		// volume = base area * height
+		double baseArea = Math.PI * radius * radius;
+		double volume = baseArea * height;
+
+		return volume;
+	}
+
+	@Override
+	public double calcBaseArea()
+	{
+		double area = Math.PI * radius * radius;
+		return area;
 	}
 }
