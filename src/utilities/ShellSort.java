@@ -25,7 +25,7 @@ public class ShellSort {
                 while (j >= space) {
                     int cmp = 0;
                     if (comparator != null) {
-                        cmp = comparator.compare(array[j - space], temp);
+                        cmp = comparator.compare(temp, array[j - space]);
                     }
                     else {
                         cmp = array[j - space].compareTo(temp);
