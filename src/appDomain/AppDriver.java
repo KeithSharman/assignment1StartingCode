@@ -26,6 +26,9 @@ public class AppDriver {
             System.out.println("Usage Error: Please provide -f[file], -t[type], and -s[sort].");
             return;
         }
+        
+        //for toString
+        Shape.setDisplayType(compareType.charAt(0));
 
         File file = new File(fileName);
         Scanner sc = new Scanner(file);

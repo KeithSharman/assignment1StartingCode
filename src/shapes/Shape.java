@@ -41,10 +41,32 @@ public abstract class Shape implements Comparable<Shape>
 	public abstract double calcVolume();
 
 	public abstract double calcBaseArea();
-
-	@Override
-	public String toString()
-	{
-		return this.getClass().getName() + " Height: " + height + " Area: " + this.calcBaseArea() + " Volume: " + this.calcVolume();
+	
+	//default display height
+	private static char displayType = 'h';
+	
+	//lets display type be changed
+	public static void setDisplayType(char type) {
+		displayType = type;
 	}
+	
+	//multiple toStrings called on in same method, code in driver sets type
+	@Override
+    public String toString() {
+
+        switch (displayType) {
+            case 'a':
+                return this.getClass().getSimpleName() +
+                       " Area: " + this.calcBaseArea();
+
+            case 'v':
+                return this.getClass().getSimpleName() +
+                       " Volume: " + this.calcVolume();
+
+            case 'h':
+            default:
+                return this.getClass().getSimpleName() +
+                       " Height: " + height;
+        }
+    }
 }
