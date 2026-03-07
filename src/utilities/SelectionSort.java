@@ -31,7 +31,7 @@ public class SelectionSort {
             	//logic for comparison type
                 int cmp;
                 if (comparator != null) {
-                    cmp = comparator.compare(array[j], array[bestIdx]);
+                    cmp = comparator.compare(array[bestIdx], array[j]);
                 } else {
                 	cmp = array[bestIdx].compareTo(array[j]);
                 }

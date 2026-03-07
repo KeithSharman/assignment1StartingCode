@@ -35,7 +35,7 @@ public class MergeSort {
     //sorting
 	public static void sort(Shape[] arr, Comparator<Shape> comp) {
 	    if (comp == null) {
-	        comp = (a, b) -> b.compareTo(a);
+	        comp = (a, b) -> a.compareTo(b);
 	    }
 	    
 	    //stop if array too short to divide
@@ -69,7 +69,7 @@ public class MergeSort {
         while (i < left.length && j < right.length) {
         	
         	//place in descending order
-            if (comp.compare(left[i], right[j]) <= 0) {
+            if (comp.compare(right[j], left[i]) <= 0) {
                 result[k++] = left[i++];
             } else {
                 result[k++] = right[j++];

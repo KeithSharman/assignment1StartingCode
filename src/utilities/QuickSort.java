@@ -39,7 +39,7 @@ public class QuickSort {
 
             if(comparator != null)
             {
-                cmp = comparator.compare(pivot, array[j]);
+                cmp = comparator.compare(array[j], pivot);
             }
             else
             {

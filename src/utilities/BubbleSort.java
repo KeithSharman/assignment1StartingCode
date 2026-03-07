@@ -14,7 +14,7 @@ public class BubbleSort {
             for (int j = 0; j < n - i - 1; j++) {
                 int cmp;
                 if (comparator != null) {
-                    cmp = comparator.compare(array[j + 1], array[j]);
+                    cmp = comparator.compare(array[j], array[j + 1]);
                 } else {
                     cmp = array[j].compareTo(array[j + 1]);
                 }
