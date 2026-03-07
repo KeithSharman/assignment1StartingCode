@@ -15,7 +15,9 @@ public class AppDriver {
         String sortAlgorithm = "";
 
         for (String s : args) {
-            if (s.startsWith("-f")) fileName = s.substring(2);
+            s = s.toLowerCase();
+            
+        	if (s.startsWith("-f")) fileName = s.substring(2);
             else if (s.startsWith("-t")) compareType = s.substring(2);
             else if (s.startsWith("-s")) sortAlgorithm = s.substring(2);
         }

@@ -1,6 +1,7 @@
 package shapes;
 
 import java.util.Comparator;
+
 /**
  * use to compare two classes by height or area.
  * i.e shapes.sort(ShapeComparator.byArea());
